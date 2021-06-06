@@ -1,14 +1,7 @@
 
-import 'dart:async';
+library filament;
 
-import 'package:flutter/services.dart';
+import 'package:filament/src/platform_interface/filament_view_platform.dart';
+import 'package:flutter/widgets.dart';
 
-class Filament {
-  static const MethodChannel _channel =
-      const MethodChannel('filament');
-
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+part 'src/filament_view.dart';
